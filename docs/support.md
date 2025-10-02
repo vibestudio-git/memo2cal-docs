@@ -2,6 +2,8 @@
 
 Memo2Cal 사용 중 문제가 발생하면 아래 채널을 통해 지원을 받으실 수 있습니다.
 
+> 전체 가이드는 [https://master-kwon.github.io/](https://master-kwon.github.io/)에서 확인할 수 있습니다.
+
 ### 1. GitHub Issues (권장)
 
 -   공개 문서 저장소의 Issues 탭에서 버그/기능 요청을 등록해 주세요.
