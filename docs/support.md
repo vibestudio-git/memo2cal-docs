@@ -2,7 +2,7 @@
 
 Memo2Cal 사용 중 문제가 발생하면 아래 채널을 통해 지원을 받으실 수 있습니다.
 
-> 전체 가이드는 [https://master-kwon.github.io/memo2cal-docs](https://master-kwon.github.io/memo2cal-docs)에서 확인할 수 있습니다.
+> 전체 가이드는 [https://vibestudio-git.github.io/memo2cal-docs](https://vibestudio-git.github.io/memo2cal-docs)에서 확인할 수 있습니다.
 
 ### 1. GitHub Issues (권장)
 
