@@ -4,7 +4,7 @@
 
 1. **Chrome Web Store 설명란**
 
-    - "도움말" 또는 "Support" 섹션에 `https://master-kwon.github.io/memo2cal-docs` GitHub Pages URL 추가
+    - "도움말" 또는 "Support" 섹션에 `https://vibestudio-git.github.io/memo2cal-docs` GitHub Pages URL 추가
     - 버전 업데이트 시 `docs/release-notes.md`의 하이라이트를 요약해 게시
 
 2. **확장 팝업 푸터**
@@ -14,7 +14,7 @@
 
 3. **비공개 main repo**
 
-    - README 최상단에 "사용자 문서" 배지/링크 추가 (`https://master-kwon.github.io/memo2cal-docs`)
+    - README 최상단에 "사용자 문서" 배지/링크 추가 (`https://vibestudio-git.github.io/memo2cal-docs`)
     - 배포 파이프라인 또는 체크리스트에 "공개 문서 업데이트 여부" 항목 포함
 
 4. **지원 채널**
@@ -29,6 +29,6 @@
 6. **GitHub Pages 게시 절차**
     - 새 공개 repo(`memo2cal-docs`)를 생성한 뒤 루트에 문서를 업로드하고 `main` 브랜치로 푸시
     - repo Settings > Pages에서 Branch = `main`, Folder = `/ (root)`로 지정 후 저장
-    - 발급된 Pages URL(`https://master-kwon.github.io/memo2cal-docs`)을 Chrome Web Store, 확장 푸터, 비공개 main repo README에 반영
+    - 발급된 Pages URL(`https://vibestudio-git.github.io/memo2cal-docs`)을 Chrome Web Store, 확장 푸터, 비공개 main repo README에 반영
 
 > 위 지침은 운영 중 변경될 수 있으며, 문서 repo README 하단에 최신 링크 정보를 명시합니다.
