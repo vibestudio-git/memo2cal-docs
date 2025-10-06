@@ -62,18 +62,28 @@
         if (accessToken) {
             console.log('✅ 토큰 수신 성공 (길이:', accessToken.length, ')');
             
-            // 오페라 확장 프로그램 ID (manifest.json의 key로 고정됨)
-            const extensionId = 'ilhmafmdhlppoefchfgmkiahcggmmahb';
+            // localStorage에 토큰 임시 저장 (확장 프로그램이 읽을 수 있도록)
+            localStorage.setItem('memo2cal_oauth_token', accessToken);
+            localStorage.setItem('memo2cal_oauth_timestamp', Date.now().toString());
             
-            // 확장 프로그램의 oauth-callback.html로 리다이렉트
-            const redirectUrl = `chrome-extension://${extensionId}/oauth-callback.html#access_token=${accessToken}`;
+            console.log('💾 토큰을 localStorage에 저장 완료');
             
-            console.log('🔄 확장 프로그램으로 리다이렉트:', redirectUrl);
+            // 사용자에게 안내 메시지 표시
+            document.querySelector('.container').innerHTML = `
+                <h1>✅ 인증 성공!</h1>
+                <div class="spinner"></div>
+                <p><strong>확장 프로그램 아이콘을 클릭</strong>하여</p>
+                <p>로그인을 완료해주세요.</p>
+                <p style="font-size: 12px; margin-top: 20px; opacity: 0.7;">
+                    토큰이 안전하게 저장되었습니다.<br>
+                    이 창은 10초 후 자동으로 닫힙니다.
+                </p>
+            `;
             
-            // 즉시 리다이렉트
+            // 10초 후 자동으로 창 닫기
             setTimeout(() => {
-                window.location.href = redirectUrl;
-            }, 500); // 0.5초 후 리다이렉트 (사용자가 메시지를 볼 수 있도록)
+                window.close();
+            }, 10000);
             
         } else if (error) {
             console.error('❌ OAuth 오류:', error);
