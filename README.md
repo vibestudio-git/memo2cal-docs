@@ -3,7 +3,7 @@
 Memo2Cal은 빠른 메모가 필요할 때 간단하게 이용할 수 있는 크롬 확장 프로그램입니다. 작성한 메모를 구글 캘린더에 실시간으로 저장하고, 수정과 삭제 등 일정으로 관리할 수 있습니다. 30분, 1시간 단위 알림 기능이 있어서 중요한 메모를 놓치지 않습니다.
 이 저장소는 사용자를 위한 공개 문서 모음으로, 설치 방법과 주요 기능, FAQ, 지원 정책을 정리합니다.
 
-> 공식 문서 사이트: [https://master-kwon.github.io/memo2cal-docs](https://master-kwon.github.io/memo2cal-docs)
+> 공식 문서 사이트: [https://vibestudio-git.github.io/memo2cal-docs](https://vibestudio-git.github.io/memo2cal-docs)
 
 ### 빠른 시작
 
