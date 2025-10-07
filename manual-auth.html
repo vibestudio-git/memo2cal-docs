@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google OAuth 시작 (수동 연동)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', '맑은 고딕', Helvetica, Arial, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 8px 0;
+      color: #4b5563;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-weight: 600;
+      background: #10b981;
+      color: #fff;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Google OAuth 시작 (수동 연동)</h1>
+    <p>아래 버튼을 누르면 구글 로그인/승인 화면으로 이동합니다. 승인 후 이 페이지가 <code>manual-auth-receiver.html</code>로 리다이렉트되며, access_token을 확인할 수
+      있습니다.</p>
+    <p class="note">주의: 본 페이지는 임시(Implicit Flow) 방식입니다. 장기적으로는 PKCE 기반 코드 플로우로 전환하는 것을 권장합니다.</p>
+    <button id="startBtn">Google 계정으로 인증 시작</button>
+    <p class="note">오류가 발생하면 브라우저의 팝업 차단을 해제해 주세요.</p>
+  </div>
+
+  <script>
+    (function () {
+      const clientId = '561159545137-imcoecoj7lvk59bl9rfdek14neftgr45.apps.googleusercontent.com';
+      const scopes = [
+        'https://www.googleapis.com/auth/calendar',
+        'https://www.googleapis.com/auth/calendar.events'
+      ];
+      // GitHub Pages 경로(사용자/레포 기준). 필요 시 사용자/레포명을 변경하세요.
+      const receiverUrl = 'https://vibestudio-git.github.io/Memo2Cal-extension-v2/public-docs/manual-auth-receiver.html';
+      const authBase = 'https://accounts.google.com/o/oauth2/v2/auth';
+
+      function buildAuthUrl() {
+        const params = new URLSearchParams({
+          client_id: clientId,
+          redirect_uri: receiverUrl,
+          response_type: 'token', // 임시: implicit flow
+          scope: scopes.join(' '),
+          include_granted_scopes: 'true',
+          prompt: 'consent'
+        });
+        return authBase + '?' + params.toString();
+      }
+
+      document.getElementById('startBtn').addEventListener('click', () => {
+        const url = buildAuthUrl();
+        window.location.href = url;
+      });
+    })();
+  </script>
+</body>
+
+</html>

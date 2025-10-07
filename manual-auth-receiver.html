@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google OAuth 토큰 수신</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', '맑은 고딕', Helvetica, Arial, sans-serif;
+      margin: 0;
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 8px 0;
+      color: #4b5563;
+    }
+
+    pre {
+      background: #0b1020;
+      color: #e5e7eb;
+      padding: 12px;
+      border-radius: 10px;
+      overflow: auto;
+    }
+
+    .token {
+      word-break: break-all;
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    button {
+      cursor: pointer;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 600;
+    }
+
+    .btn {
+      background: #10b981;
+      color: #fff;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    .error {
+      color: #dc2626;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Google OAuth 토큰 수신</h1>
+    <p>아래에 표시된 access_token 값을 복사하여 확장 프로그램의 수동연결 페이지에 붙여넣어 주세요.</p>
+    <div id="result"></div>
+    <p class="note">보안: 이 페이지는 GitHub Pages에서 정적 제공되며, 토큰을 서버로 전송하지 않습니다.</p>
+  </div>
+
+  <script>
+    (function () {
+      const result = document.getElementById('result');
+      try {
+        const hash = window.location.hash.replace(/^#/, '');
+        const params = new URLSearchParams(hash);
+        const token = params.get('access_token');
+        const error = params.get('error');
+        const errorDescription = params.get('error_description');
+
+        if (error) {
+          result.innerHTML = '<p class="error">오류: ' + (errorDescription || error) + '</p>';
+          return;
+        }
+        if (!token) {
+          result.innerHTML = '<p class="error">access_token이 URL에 없습니다. 다시 시도해 주세요.</p>';
+          return;
+        }
+
+        const pre = document.createElement('pre');
+        const code = document.createElement('code');
+        code.className = 'token';
+        code.textContent = token;
+        pre.appendChild(code);
+
+        const row = document.createElement('div');
+        row.className = 'row';
+        const btn = document.createElement('button');
+        btn.className = 'btn';
+        btn.textContent = '토큰 복사';
+        btn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(token);
+            btn.textContent = '복사됨!';
+            setTimeout(() => btn.textContent = '토큰 복사', 1200);
+          } catch (e) {
+            alert('복사 실패: ' + e.message);
+          }
+        });
+
+        result.appendChild(pre);
+        result.appendChild(row);
+        row.appendChild(btn);
+      } catch (e) {
+        result.innerHTML = '<p class="error">처리 오류: ' + e.message + '</p>';
+      }
+    })();
+  </script>
+</body>
+
+</html>
