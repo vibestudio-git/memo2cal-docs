@@ -7,10 +7,9 @@ Memo2Cal은 빠른 메모가 필요할 때 간단하게 이용할 수 있는 크
 
 ### 빠른 시작
 
--   [설치 및 시작 안내](./docs/getting-started.md)
--   [자주 묻는 질문](./docs/faq.md)
--   [릴리즈 하이라이트](./docs/release-notes.md)
--   [지원 및 문의](./docs/support.md)
+-   사용자 매뉴얼(User Manual): https://vibestudio-git.github.io/memo2cal-docs/user-manual.html
+-   자주 묻는 질문(FAQ): https://vibestudio-git.github.io/memo2cal-docs/faq.html
+-   개인정보처리방침(Privacy Policy): https://vibestudio-git.github.io/memo2cal-docs/privacy-policy.html
 
 ### 주요 기능 요약
 
@@ -23,13 +22,12 @@ Memo2Cal은 빠른 메모가 필요할 때 간단하게 이용할 수 있는 크
 ### 문서 구조
 
 ```
-public-docs/
+memo2cal-docs/
 ├─ README.md
-└─ docs/
-   ├─ getting-started.md
-   ├─ faq.md
-   ├─ release-notes.md
-   └─ support.md
+├─ user-manual.html
+├─ faq.html
+├─ privacy-policy.html
+└─ oauth-callback.html
 ```
 
 ### 라이선스 및 기여
