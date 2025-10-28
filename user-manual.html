@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memo2Cal User Manual | VibeStudio</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif; margin: 0; }
+    .container { max-width: 880px; margin: 0 auto; padding: 24px; }
+    .lang-switch { display: flex; gap: 8px; align-items: center; justify-content: flex-end; margin-bottom: 12px; }
+    .btn { border: 1px solid #d1d5db; padding: 6px 10px; border-radius: 6px; background:#fff; color:#374151; cursor: pointer; }
+    .btn[aria-current="true"] { background:#111827; color:#fff; border-color:#111827; }
+    h1 { margin-top: 0; }
+    hr { border: 0; border-top: 1px solid #e5e7eb; margin: 16px 0; }
+    .muted { color: #6b7280; font-size: 0.9rem; }
+    .hidden { display: none; }
+    section { line-height: 1.6; }
+    ul { margin: 0.25rem 0 1rem 1.25rem; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card { background: #fff; border:1px solid #e5e7eb; border-radius: 10px; padding: 16px 20px; }
+    @media (prefers-color-scheme: dark) {
+      .btn { background:#111827; color:#f3f4f6; border-color:#374151; }
+      .btn[aria-current="true"] { background:#2563eb; border-color:#2563eb; }
+      .card { background:#0b0f17; border-color:#1f2937; }
+      hr { border-top-color:#1f2937; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <span class="muted">Language</span>
+      <button id="btn-en" class="btn" type="button" aria-current="false">English</button>
+      <button id="btn-ko" class="btn" type="button" aria-current="false">한국어</button>
+    </div>
+
+    <div class="card">
+      <h1>Memo2Cal User Manual</h1>
+      <div class="muted">Last updated: 2025-10-26</div>
+      <hr />
+
+      <!-- English -->
+      <section id="en" lang="en">
+        <h2>1) First run and sign‑in</h2>
+        <ul>
+          <li>Open the popup via the extension icon.</li>
+          <li>Click “Connect Account” to sign in and grant permissions.</li>
+          <li>Chrome uses the Identity API; other Chromium browsers may use a web redirect flow.</li>
+          <li>Tokens are stored locally; silent refresh is attempted before expiry.</li>
+        </ul>
+
+        <h2>2) Quick memo and save</h2>
+        <ul>
+          <li>Enter your memo; set start/end times if needed; choose a calendar.</li>
+          <li>Click Save to create a Calendar event (view/edit/delete in Google Calendar).</li>
+        </ul>
+
+        <h2>3) View and navigate events</h2>
+        <ul>
+          <li>Shows today’s events in chronological order; auto‑centers near the current time.</li>
+          <li>Scrollbar appears when there are 4+ items.</li>
+        </ul>
+
+        <h2>4) Edit/Delete</h2>
+        <ul>
+          <li>Select an event to edit or delete; changes apply instantly.</li>
+          <li>Use the calendar icon to pick another date.</li>
+        </ul>
+
+        <h2>5) Reminder settings</h2>
+        <ul>
+          <li>Intervals: 30 min / 1 hour, or hourly value.</li>
+          <li>Time window: reminders only during working hours; toggle OFF to disable.</li>
+          <li>Works even when the browser is minimized or in background.</li>
+        </ul>
+
+        <h2>6) Behavior by browser state</h2>
+        <ul>
+          <li>Foreground: open the action popup immediately.</li>
+          <li>Background: focus the window, then open the action popup.</li>
+          <li>Minimized: open a separate popup window at a fixed position.</li>
+        </ul>
+
+        <h2>7) Troubleshooting</h2>
+        <ul>
+          <li>No reminders: check notification permission; verify time window.</li>
+          <li>Frequent sign‑out: keep access in your Google Account settings.</li>
+          <li>Popup won’t open: check popup blockers; try the action popup again.</li>
+          <li>No events: verify the calendar; check if “today‑only” is active.</li>
+        </ul>
+
+        <h2>8) Privacy/Security</h2>
+        <ul>
+          <li>Local storage only; no developer servers.</li>
+          <li>Policy: https://vibestudio-git.github.io/memo2cal-docs/privacy-policy.html</li>
+        </ul>
+      </section>
+
+      <!-- Korean -->
+      <section id="ko" lang="ko" class="hidden">
+        <h2>1) 첫 실행과 로그인</h2>
+        <ul>
+          <li>확장 아이콘으로 팝업을 엽니다.</li>
+          <li>“계정연동”을 눌러 로그인/권한 승인을 진행합니다.</li>
+          <li>Chrome은 Identity API, 일부 브라우저는 웹 리다이렉트 방식을 사용합니다.</li>
+          <li>토큰은 로컬에 저장되며, 만료 전 자동 갱신이 시도됩니다.</li>
+        </ul>
+
+        <h2>2) 빠른 메모 작성 및 저장</h2>
+        <ul>
+          <li>메모 입력 → 필요 시 시간 설정 → 캘린더 선택 → 저장.</li>
+          <li>생성된 일정은 Google 캘린더에서 확인/수정/삭제할 수 있습니다.</li>
+        </ul>
+
+        <h2>3) 일정 보기와 탐색</h2>
+        <ul>
+          <li>오늘 일정을 시간순으로 표시하며, 현재 시각 근처로 자동 정렬합니다.</li>
+          <li>4개 이상이면 스크롤바가 자동 표시됩니다.</li>
+        </ul>
+
+        <h2>4) 수정/삭제</h2>
+        <ul>
+          <li>목록에서 일정을 선택해 수정/삭제할 수 있습니다.</li>
+          <li>달력 아이콘으로 다른 날짜를 선택할 수 있습니다.</li>
+        </ul>
+
+        <h2>5) 알림 설정</h2>
+        <ul>
+          <li>간격: 30분/1시간 또는 시간 단위로 설정.</li>
+          <li>시간대: 업무 시간대 내에서만 알림; 토글 OFF로 비활성화.</li>
+          <li>최소화/백그라운드에서도 동작합니다.</li>
+        </ul>
+
+        <h2>6) 브라우저 상태별 동작</h2>
+        <ul>
+          <li>포그라운드: 아이콘 팝업 즉시 오픈.</li>
+          <li>백그라운드: 창 포커싱 후 아이콘 팝업 오픈.</li>
+          <li>최소화: 별도 팝업 창을 고정 위치에 생성.</li>
+        </ul>
+
+        <h2>7) 문제 해결</h2>
+        <ul>
+          <li>알림 없음: 권한/시간대 확인</li>
+          <li>자주 인증 끊김: Google 계정의 접근 권한 유지</li>
+          <li>팝업 미오픈: 팝업 차단 확인, 아이콘 팝업 재시도</li>
+          <li>일정 없음: 캘린더/날짜 범위 확인</li>
+        </ul>
+
+        <h2>8) 개인정보/보안</h2>
+        <ul>
+          <li>로컬 저장소만 사용, 개발자 서버 미사용</li>
+          <li>정책: https://vibestudio-git.github.io/memo2cal-docs/privacy-policy.html</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const $en = document.getElementById('en');
+      const $ko = document.getElementById('ko');
+      const $btnEn = document.getElementById('btn-en');
+      const $btnKo = document.getElementById('btn-ko');
+
+      function setLang(lang) {
+        const isKo = lang === 'ko';
+        $ko.classList.toggle('hidden', !isKo);
+        $en.classList.toggle('hidden', isKo);
+        $btnKo.setAttribute('aria-current', String(isKo));
+        $btnEn.setAttribute('aria-current', String(!isKo));
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', isKo ? 'ko' : 'en');
+        history.replaceState({}, '', url.toString());
+        document.documentElement.lang = isKo ? 'ko' : 'en';
+      }
+
+      function detectLang() {
+        const url = new URL(window.location.href);
+        const q = (url.searchParams.get('lang') || '').toLowerCase();
+        if (q === 'ko' || q === 'en') return q;
+        const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        return nav.startsWith('ko') ? 'ko' : 'en';
+      }
+
+      $btnEn.addEventListener('click', () => setLang('en'));
+      $btnKo.addEventListener('click', () => setLang('ko'));
+
+      setLang(detectLang());
+    })();
+  </script>
+</body>
+</html>

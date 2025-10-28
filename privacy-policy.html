@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memo2Cal Privacy Policy | VibeStudio</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", sans-serif; margin: 0; }
+    .container { max-width: 880px; margin: 0 auto; padding: 24px; }
+    .lang-switch { display: flex; gap: 8px; align-items: center; justify-content: flex-end; margin-bottom: 12px; }
+    .btn { border: 1px solid #d1d5db; padding: 6px 10px; border-radius: 6px; background:#fff; color:#374151; cursor: pointer; }
+    .btn[aria-current="true"] { background:#111827; color:#fff; border-color:#111827; }
+    h1 { margin-top: 0; }
+    hr { border: 0; border-top: 1px solid #e5e7eb; margin: 16px 0; }
+    .muted { color: #6b7280; font-size: 0.9rem; }
+    .hidden { display: none; }
+    section { line-height: 1.6; }
+    ul { margin: 0.25rem 0 1rem 1.25rem; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card { background: #fff; border:1px solid #e5e7eb; border-radius: 10px; padding: 16px 20px; }
+    @media (prefers-color-scheme: dark) {
+      .btn { background:#111827; color:#f3f4f6; border-color:#374151; }
+      .btn[aria-current="true"] { background:#2563eb; border-color:#2563eb; }
+      .card { background:#0b0f17; border-color:#1f2937; }
+      hr { border-top-color:#1f2937; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <span class="muted">Language</span>
+      <button id="btn-en" class="btn" type="button" aria-current="false">English</button>
+      <button id="btn-ko" class="btn" type="button" aria-current="false">한국어</button>
+    </div>
+
+    <div class="card">
+      <h1>Memo2Cal Privacy Policy</h1>
+      <div class="muted" id="last-updated">Last updated: 2025-10-26</div>
+      <hr />
+
+      <!-- English -->
+      <section id="en" lang="en">
+        <p><strong>Publisher (personal business):</strong> VibeStudio (바이브스튜디오)<br/>
+        <strong>Representative:</strong> Kwon Yongnam (권용남)<br/>
+        <strong>Contact:</strong> smartbigbang@gmail.com<br/>
+        <strong>Public URL:</strong> https://vibestudio-git.github.io/memo2cal-docs/privacy-policy.html</p>
+
+        <h2>1. Information we collect and how (no developer servers)</h2>
+        <ul>
+          <li>We do not operate developer servers, nor do we transmit/store personal data on any developer-operated backend.</li>
+          <li>Google account auth info: OAuth tokens for Google Calendar API access (stored locally)</li>
+          <li>Calendar data access: list/create/update/delete events via Google APIs with explicit user consent only</li>
+          <li>User inputs: memo text, reminder interval, working hours, and other settings</li>
+          <li>Technical info: minimal diagnostics (errors) stored locally</li>
+        </ul>
+
+        <h2>2. Purposes of processing</h2>
+        <ul>
+          <li>Create Google Calendar events from quick memos</li>
+          <li>Provide periodic reminders to build a memo habit</li>
+          <li>Store/apply user preferences (time window, reminder interval)</li>
+          <li>Improve stability with minimal diagnostics</li>
+        </ul>
+
+        <h2>3. Storage and security</h2>
+        <ul>
+          <li>Local storage only (Chrome storage on the user’s device)</li>
+          <li>HTTPS for all communications with Google APIs</li>
+          <li>Least-privilege permissions, used strictly for features</li>
+        </ul>
+
+        <h2>4. Third‑party sharing and transfers</h2>
+        <ul>
+          <li>No transfer to developer servers; no selling/sharing with third parties.</li>
+          <li>Calendar data is sent only to Google via Google APIs within the scope of user consent. The Service does not proxy/store such data on developer servers.</li>
+        </ul>
+
+        <h2>5. Google policy compliance (“Limited Use”)</h2>
+        <p>Our use and transfer of information received from Google APIs will adhere to the
+        <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the “Limited Use” requirements.</p>
+
+        <h2>6. Your rights and choices</h2>
+        <ul>
+          <li>Access/Rectification/Deletion: manage events directly in Google Calendar. After uninstalling, local data is no longer used.</li>
+          <li>Revocation: disable the extension in Chrome, or revoke access in your Google Account (third‑party app access).</li>
+        </ul>
+
+        <h2>7. Retention and deletion</h2>
+        <ul>
+          <li>Data is kept locally only while the Service is in use.</li>
+          <li>Uninstalling removes local data on the device; some temporary data may be periodically cleared.</li>
+        </ul>
+
+        <h2>8. Cookies/analytics/tracking</h2>
+        <ul>
+          <li>No third‑party analytics or tracking tools</li>
+          <li>No cookies stored by this extension</li>
+        </ul>
+
+        <h2>9. Children’s privacy</h2>
+        <p>Not directed to children under 13; we do not knowingly collect children’s personal information.</p>
+
+        <h2>10. International transfers</h2>
+        <p>No developer servers are used. Processing via Google APIs follows Google’s systems and policies.</p>
+
+        <h2>11. Permissions and purposes (summary)</h2>
+        <ul>
+          <li><code>identity</code>: Google OAuth and Calendar API access</li>
+          <li><code>storage</code>: local storage of settings/temporary memo state</li>
+          <li><code>alarms</code>: schedule periodic reminders</li>
+          <li><code>notifications</code>: show memo reminders and actions</li>
+          <li><code>windows</code>, <code>tabs</code>, <code>system.display</code>: open and place a popup when minimized/in background (accessibility)</li>
+          <li><code>host_permissions</code>: communication with <code>googleapis</code> and <code>calendar.google.com</code></li>
+        </ul>
+
+        <h2>12. Changes and notice</h2>
+        <p>We will provide reasonable notice via the extension when this policy changes and update the “Last updated” date above.</p>
+
+        <h2>13. Contact</h2>
+        <p>VibeStudio (바이브스튜디오) — smartbigbang@gmail.com</p>
+      </section>
+
+      <!-- Korean -->
+      <section id="ko" lang="ko" class="hidden">
+        <p><strong>발행자(개인사업자):</strong> 바이브스튜디오(VibeStudio)<br/>
+        <strong>대표자:</strong> 권용남(Kwon Yongnam)<br/>
+        <strong>연락처:</strong> smartbigbang@gmail.com<br/>
+        <strong>공개 URL:</strong> https://vibestudio-git.github.io/memo2cal-docs/privacy-policy.html</p>
+
+        <h2>1. 수집하는 정보와 수집 방법 (개발자 서버 미사용)</h2>
+        <ul>
+          <li>개발자 운영 서버를 사용하지 않으며, 개인정보를 전송/저장하지 않습니다.</li>
+          <li>Google 계정 인증 정보: Google Calendar API 접근을 위한 OAuth 토큰(로컬 저장)</li>
+          <li>캘린더 데이터 접근: 사용자 동의 하에 Google API로 일정 조회/생성/수정/삭제</li>
+          <li>사용자 입력 데이터: 메모 내용, 알림 간격, 업무 시간대 등 설정</li>
+          <li>기술적 정보: 오류 등 최소 진단 정보(로컬 보관)</li>
+        </ul>
+
+        <h2>2. 이용 목적</h2>
+        <ul>
+          <li>빠른 메모를 Google 캘린더 일정으로 생성</li>
+          <li>주기 알림 제공으로 메모 습관 형성</li>
+          <li>사용자 설정(시간대/간격) 저장 및 적용</li>
+          <li>안정성 개선을 위한 최소 진단</li>
+        </ul>
+
+        <h2>3. 저장 위치 및 보안</h2>
+        <ul>
+          <li>로컬 저장(사용자 기기의 Chrome storage)</li>
+          <li>Google API 통신은 HTTPS 사용</li>
+          <li>기능 제공에 필요한 최소 권한만 사용</li>
+        </ul>
+
+        <h2>4. 제3자 제공 및 외부 전송</h2>
+        <ul>
+          <li>개발자 서버로 전송하지 않으며, 제3자에 판매/공유하지 않습니다.</li>
+          <li>캘린더 데이터는 사용자 동의 범위 내에서만 Google API로 전송되며, 개발자 서버에 중계/저장하지 않습니다.</li>
+        </ul>
+
+        <h2>5. Google 정책 준수(“Limited Use”)</h2>
+        <p>본 서비스는 Google API로부터 수신한 정보의 사용/전송에 관하여
+        <a target="_blank" rel="noopener noreferrer" href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>
+        ("Limited Use" 요건 포함)를 준수합니다.</p>
+
+        <h2>6. 이용자 권리와 선택</h2>
+        <ul>
+          <li>열람/정정/삭제: Google 캘린더에서 직접 관리. 확장 프로그램 제거 시 로컬 데이터는 더 이상 사용되지 않습니다.</li>
+          <li>철회: Chrome 확장프로그램 관리 또는 Google 계정(제3자 앱 접근)에서 접근 권한 해지 가능</li>
+        </ul>
+
+        <h2>7. 보유 및 파기</h2>
+        <ul>
+          <li>서비스 이용 기간 동안에 한하여 로컬 데이터 사용</li>
+          <li>제거 시 기기 내 로컬 데이터 삭제, 일부 임시 데이터는 주기적으로 초기화될 수 있음</li>
+        </ul>
+
+        <h2>8. 쿠키/분석/추적</h2>
+        <ul>
+          <li>제3자 분석/추적 도구 미사용</li>
+          <li>확장 프로그램 특성상 별도 쿠키 저장 없음</li>
+        </ul>
+
+        <h2>9. 아동 개인정보보호</h2>
+        <p>13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+        <h2>10. 국제 전송</h2>
+        <p>개발자 서버를 사용하지 않으며, Google API 이용에 따른 처리는 Google의 시스템/정책을 따릅니다.</p>
+
+        <h2>11. 권한과 사용 목적(요약)</h2>
+        <ul>
+          <li><code>identity</code>: Google OAuth 및 Calendar API 접근</li>
+          <li><code>storage</code>: 설정/임시 메모 상태 로컬 저장</li>
+          <li><code>alarms</code>: 주기 알림 스케줄링</li>
+          <li><code>notifications</code>: 메모 알림 표시 및 동작</li>
+          <li><code>windows</code>, <code>tabs</code>, <code>system.display</code>: 최소화/백그라운드에서도 팝업 생성/배치(접근성)</li>
+          <li><code>host_permissions</code>: <code>googleapis</code>, <code>calendar.google.com</code> 통신</li>
+        </ul>
+
+        <h2>12. 정책 변경과 고지</h2>
+        <p>정책 변경 시 합리적인 방법으로 고지하고 상단의 “마지막 업데이트” 날짜를 갱신합니다.</p>
+
+        <h2>13. 문의</h2>
+        <p>바이브스튜디오(VibeStudio) — smartbigbang@gmail.com</p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const $en = document.getElementById('en');
+      const $ko = document.getElementById('ko');
+      const $btnEn = document.getElementById('btn-en');
+      const $btnKo = document.getElementById('btn-ko');
+
+      function setLang(lang) {
+        const isKo = lang === 'ko';
+        $ko.classList.toggle('hidden', !isKo);
+        $en.classList.toggle('hidden', isKo);
+        $btnKo.setAttribute('aria-current', String(isKo));
+        $btnEn.setAttribute('aria-current', String(!isKo));
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', isKo ? 'ko' : 'en');
+        history.replaceState({}, '', url.toString());
+        document.documentElement.lang = isKo ? 'ko' : 'en';
+      }
+
+      function detectLang() {
+        const url = new URL(window.location.href);
+        const q = (url.searchParams.get('lang') || '').toLowerCase();
+        if (q === 'ko' || q === 'en') return q;
+        const nav = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        return nav.startsWith('ko') ? 'ko' : 'en';
+      }
+
+      $btnEn.addEventListener('click', () => setLang('en'));
+      $btnKo.addEventListener('click', () => setLang('ko'));
+
+      setLang(detectLang());
+    })();
+  </script>
+</body>
+</html>
