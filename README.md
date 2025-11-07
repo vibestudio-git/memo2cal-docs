@@ -3,15 +3,15 @@
 This repository hosts the public documentation for the Memo2Cal Chrome extension.
 Quick notes turn into Google Calendar events, with periodic reminders to build a habit.
 
-> Official site: https://vibestudio-git.github.io/memo2cal-docs/
+> Official site: https://memo2cal.vibestudio.live/
 
 This README is in English. Read in Korean: [README.ko.md](./README.ko.md)
 
 ### Quick Start
 
-- User Manual: https://vibestudio-git.github.io/memo2cal-docs/user-manual.html
-- FAQ: https://vibestudio-git.github.io/memo2cal-docs/faq.html
-- Privacy Policy: https://vibestudio-git.github.io/memo2cal-docs/privacy-policy.html
+- User Manual: https://memo2cal.vibestudio.live/user-manual.html
+- FAQ: https://memo2cal.vibestudio.live/faq.html
+- Privacy Policy: https://memo2cal.vibestudio.live/privacy-policy.html
 
 ### Highlights
 
