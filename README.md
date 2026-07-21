@@ -34,5 +34,5 @@ memo2cal-docs/
 ```
 
 ### Links
-- Extension repo: https://github.com/vibestudio-git/Memo2Cal-extension-v2
+- Extension repo: https://github.com/vibestudio-git/Memo2Cal-extension
 - Issues / feedback: please open an issue in this repository or contact via the email in the policy.

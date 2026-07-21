@@ -31,5 +31,5 @@ memo2cal-docs/
 ```
 
 ### 링크
-- 확장프로그램 저장소: https://github.com/vibestudio-git/Memo2Cal-extension-v2
+- 확장프로그램 저장소: https://github.com/vibestudio-git/Memo2Cal-extension
 - 이슈/피드백: 본 저장소의 GitHub Issues 또는 정책 문서의 이메일로 문의해주세요.
